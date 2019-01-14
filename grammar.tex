@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{backnaur}
+
+\begin{document} 
+
+\begin{bnf*}
+	\bnfprod{stmt}
+		{\bnfpn{resourcename} \bnfsp \bnfpn{block}}\\
+	\bnfprod{block}
+		{\bnfpn{resourcetype} \bnfsp \bnfpn{properties}}\\
+	\bnfprod{properties}
+		{\bnfpn{string} \bnfor \bnfpn{string} \bnfsp \bnfpn{properties}}\\
+	\bnfprod{resourcename}{\bnfpn{string}}\\
+	\bnfprod{resourcetype}{\bnfts{S3}}\\
+	\bnfprod{string}
+		{\bnfts{a} \bnfsk \bnfts{z} \bnfor \bnfts{A} \bnfsk \bnfts{Z}}\\
+\end{bnf*}
+\end{document}
